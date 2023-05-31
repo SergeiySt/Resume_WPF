@@ -1,0 +1,16 @@
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\bin\Debug\WPF_Resume.exe.config
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\bin\Debug\WPF_Resume.exe
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\bin\Debug\WPF_Resume.pdb
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\WPF_Resume.csproj.AssemblyReference.cache
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\WPF_Resume.csproj.SuggestedBindingRedirects.cache
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\MainWindow.g.cs
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\App.g.cs
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\WPF_Resume_MarkupCompile.cache
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\WPF_Resume_MarkupCompile.lref
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\MainWindow.baml
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\WPF_Resume.g.resources
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\WPF_Resume.Properties.Resources.resources
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\WPF_Resume.csproj.GenerateResource.cache
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\WPF_Resume.csproj.CoreCompileInputs.cache
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\WPF_Resume.exe
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\WPF_Resume.pdb
