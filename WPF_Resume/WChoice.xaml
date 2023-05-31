@@ -6,8 +6,12 @@
         xmlns:local="clr-namespace:WPF_Resume"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="Варіант оформлення резюме" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Варіант оформлення резюме" Height="350" Width="531" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Label Content="Виберіть варіант оформлення резюме" HorizontalAlignment="Left" Margin="61,32,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold"/>
+        <RadioButton x:Name="radioButtonSimply" Content="Спрощений варіант" HorizontalAlignment="Left" Margin="81,84,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="20"/>
+        <RadioButton x:Name="radioButtonComplex" Content="Для роботодавця" HorizontalAlignment="Left" Margin="81,115,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="20"/>
+        <RadioButton x:Name="radioButtonStandart" Content="Для прикладу" HorizontalAlignment="Left" Margin="81,146,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="20"/>
+        <Button x:Name="buttonStart" Content="Почати" HorizontalAlignment="Center" Margin="0,231,0,0" VerticalAlignment="Top" FontSize="24" Height="50" Width="128"/>
     </Grid>
 </Window>
