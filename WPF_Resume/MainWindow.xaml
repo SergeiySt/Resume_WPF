@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Resume"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        ResizeMode="NoResize"
+        Title="MainWindow" Height="274" Width="413" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="191,57,0,0" VerticalAlignment="Top"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="210,153,0,0" VerticalAlignment="Top"/>
+        <Label Content="Вітаємо Вас у програмі" HorizontalAlignment="Left" Margin="71,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="buttonBegin" Content="Почати" HorizontalAlignment="Left" Margin="157,153,0,0" FontSize="18" Width="108" Height="48" VerticalAlignment="Top"/>
+        <Label Content="RESUME" HorizontalAlignment="Left" Margin="135,57,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
 
     </Grid>
 </Window>
