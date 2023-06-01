@@ -1,0 +1,28 @@
+﻿<Page x:Class="WPF_Resume.Pages_Simple.PEducation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_Resume.Pages_Simple"
+      mc:Ignorable="d"
+      Title="PEducation" Height="219" Width="549">
+    <Page.Resources>
+        <Style x:Key="NoSpacingParagraph" TargetType="Paragraph">
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="LineHeight" Value="1"/>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="10,22,0,0" TextWrapping="Wrap" Text="Освіта:" VerticalAlignment="Top" FontSize="16"/>
+       
+        <RichTextBox x:Name="richTextBox" Margin="10,48,10,10">
+            <FlowDocument>
+                <Paragraph Style="{StaticResource NoSpacingParagraph}">
+                    <!--<Run Text="RichTextBox"/>-->
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</Page>

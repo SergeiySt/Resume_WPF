@@ -9,8 +9,7 @@
         Title="MainWindow" Height="274" Width="413" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label Content="Вітаємо Вас у програмі" HorizontalAlignment="Left" Margin="71,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
-        <Button x:Name="buttonBegin" Content="Почати" HorizontalAlignment="Left" Margin="157,153,0,0" FontSize="18" Width="108" Height="48" VerticalAlignment="Top"/>
+        <Button x:Name="buttonBegin" Content="Почати" HorizontalAlignment="Left" Margin="157,153,0,0" FontSize="18" Width="108" Height="48" VerticalAlignment="Top" Click="buttonBegin_Click"/>
         <Label Content="RESUME" HorizontalAlignment="Left" Margin="135,57,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
-
     </Grid>
 </Window>

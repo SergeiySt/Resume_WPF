@@ -23,5 +23,15 @@ namespace WPF_Resume
         {
             InitializeComponent();
         }
+
+        private void buttonStart_Click(object sender, RoutedEventArgs e)
+        {
+            if (radioButtonSimply.IsChecked == true)
+            {
+                WFirtsResume wFirtsResume = new WFirtsResume();
+                wFirtsResume.Show();
+                this.Close();
+            }
+        }
     }
 }
