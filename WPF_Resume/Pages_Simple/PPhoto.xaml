@@ -11,14 +11,7 @@
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="208" Margin="324,10,0,0" VerticalAlignment="Top" Width="279">
             <Image x:Name="pictureBox" Stretch="Uniform" Cursor="Hand" />
         </Border>
-
-
-
         <TextBlock HorizontalAlignment="Left" Margin="26,19,0,0" TextWrapping="Wrap" Text="Добавте своє фото" VerticalAlignment="Top" FontSize="16"/>
         <Button x:Name="buttonAddPicture" Content="Додати фото" HorizontalAlignment="Left" Margin="56,82,0,0" VerticalAlignment="Top" FontSize="16" Height="103" Width="151" Click="buttonAddPicture_Click"/>
-        <!--<Button x:Name="buttonBack" Content="Назад" HorizontalAlignment="Left" Margin="56,263,0,0" VerticalAlignment="Top" Width="124" Click="buttonBack_Click"/>
-        <Button x:Name="buttonNext" Content="Далі" HorizontalAlignment="Left" Margin="234,263,0,0" VerticalAlignment="Top" Width="125" Click="buttonNext_Click"/>
-        <Button x:Name="buttonClose" Content="Завершити" HorizontalAlignment="Left" Margin="411,263,0,0" VerticalAlignment="Top" Width="105"/>-->
-
     </Grid>
 </Page>

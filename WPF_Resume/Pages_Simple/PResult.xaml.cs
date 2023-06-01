@@ -20,11 +20,24 @@ namespace WPF_Resume.Pages_Simple
     /// </summary>
     public partial class PResult : Page
     {
+        AplicationContext db = new AplicationContext();
+
+        UserResume userResume;
 
         public event Action NextPageClicked;
         public PResult()
         {
             InitializeComponent();
+
+            userResume = new UserResume();
+
+            //textBlolckSurname.Text = userResume.Surname.ToString();
+            //textBlockName.Text = userResume.UserName.ToString();
+            //textBlockPobatkovi.Text = userResume.Pobatkovi.ToString();
+            //textBlockDate.Text = userResume.Date.ToString();
+            //textBlockAdress.Text = userResume.Adress.ToString();
+            //textBlockEmail.Text = userResume.Email.ToString();
+            //textBlockEducation.Text = userResume.Education.ToString();
         }
     }
 }

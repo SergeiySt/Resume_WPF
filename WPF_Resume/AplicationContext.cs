@@ -9,11 +9,11 @@ namespace WPF_Resume
 {
     internal class AplicationContext : DbContext
     {
-        public DbSet<UserResume> userResumes { get; set; } = null;
+        public DbSet<UserResume> UserResume { get; set; } = null;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Date Source = helloapp.db");
+            optionsBuilder.UseSqlite("Data Source=resume.db");
         }
     }
 }

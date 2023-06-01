@@ -20,7 +20,9 @@ namespace WPF_Resume.Pages_Simple
     /// </summary>
     public partial class PEducation : Page
     {
-        public event Action NextPageClicked;
+
+        public string Education { get { return new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text; } }
+
         public PEducation()
         {
             InitializeComponent();
