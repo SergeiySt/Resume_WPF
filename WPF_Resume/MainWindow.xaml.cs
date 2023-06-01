@@ -24,5 +24,12 @@ namespace WPF_Resume
         {
             InitializeComponent();
         }
+
+        private void buttonBegin_Click(object sender, RoutedEventArgs e)
+        {
+            WChoice wChoice = new WChoice();
+            wChoice.Show();
+            this.Close();
+        }
     }
 }

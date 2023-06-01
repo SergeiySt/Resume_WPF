@@ -12,6 +12,6 @@
         <RadioButton x:Name="radioButtonSimply" Content="Спрощений варіант" HorizontalAlignment="Left" Margin="81,84,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="20"/>
         <RadioButton x:Name="radioButtonComplex" Content="Для роботодавця" HorizontalAlignment="Left" Margin="81,115,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="20"/>
         <RadioButton x:Name="radioButtonStandart" Content="Для прикладу" HorizontalAlignment="Left" Margin="81,146,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="20"/>
-        <Button x:Name="buttonStart" Content="Почати" HorizontalAlignment="Center" Margin="0,231,0,0" VerticalAlignment="Top" FontSize="24" Height="50" Width="128"/>
+        <Button x:Name="buttonStart" Content="Почати" HorizontalAlignment="Center" Margin="0,231,0,0" VerticalAlignment="Top" FontSize="24" Height="50" Width="128" Click="buttonStart_Click"/>
     </Grid>
 </Window>
