@@ -21,41 +21,11 @@ namespace WPF_Resume
     /// </summary>
     public partial class PPhoto : Page
     {
-        public byte[] Picture
-        {
-            get
-            {
-                BitmapImage bitmapImage = pictureBox.Source as BitmapImage;
-                if (bitmapImage != null)
-                {
-                    using (MemoryStream memoryStream = new MemoryStream())
-                    {
-                        BitmapEncoder encoder;
-                        if (bitmapImage.Format == PixelFormats.Pbgra32)
-                        {
-                            encoder = new PngBitmapEncoder();
-                        }
-                        else if (bitmapImage.Format == PixelFormats.Pbgra32)
-                        {
-                            encoder = new JpegBitmapEncoder();
-                        }
-                        else
-                        {
-                            return null;
-                        }
-
-                        encoder.Frames.Add(BitmapFrame.Create(bitmapImage));
-                        encoder.Save(memoryStream);
-                        return memoryStream.ToArray();
-                    }
-                }
-                return null;
-            }
-        }
         public PPhoto()
         {
             InitializeComponent();
         }
+        public ImageSource Picture { get; private set; }
         private void buttonAddPicture_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
@@ -65,7 +35,8 @@ namespace WPF_Resume
             if (result == true)
             {
                 string filename = dlg.FileName;
-                pictureBox.Source = new BitmapImage(new Uri(filename));
+                Picture = new BitmapImage(new Uri(filename));
+                pictureBox.Source = Picture;
             }
         }
     }

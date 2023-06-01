@@ -87,3 +87,5 @@ D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\Pages_Sim
 D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\Pages_Simple\PEducation.baml
 D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\Pages_Simple\PResult.g.cs
 D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\Pages_Simple\PResult.baml
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\bin\Debug\Microsoft.EntityFrameworkCore.Design.dll
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\bin\Debug\Microsoft.EntityFrameworkCore.Design.xml
