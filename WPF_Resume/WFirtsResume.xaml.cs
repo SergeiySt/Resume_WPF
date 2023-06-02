@@ -8,13 +8,15 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_Resume.Migrations;
 using WPF_Resume.Pages_Simple;
-
+using MessageBox = System.Windows.MessageBox;
 
 namespace WPF_Resume
 {
@@ -23,8 +25,6 @@ namespace WPF_Resume
     /// </summary>
     public partial class WFirtsResume : Window
     {
-        //AplicationContext db = new AplicationContext();
-
         UserResume userResumes = new UserResume();
 
         PFIO pFIO = new PFIO();
@@ -40,14 +40,6 @@ namespace WPF_Resume
 
         private void Page1_NextButtonClick()
         {
-            userResumes.Surname = pFIO.Surname;
-            userResumes.UserName = pFIO.UserName;
-            userResumes.Pobatkovi = pFIO.Pobatkovi;
-            userResumes.Date = pFIO.Date;
-            userResumes.Adress = pFIO.Adress;
-            userResumes.PhoneNumber = pFIO.PhoneNumber;
-            userResumes.Email = pFIO.Email;
-
             mainFrame.NavigationService.Navigate(pPhoto);
         }
 
@@ -59,22 +51,52 @@ namespace WPF_Resume
 
         private void Page2_NextButtonClick()
         {
-            // userResumes.Picture = pPhoto.Picture;
-            userResumes.Picture = pPhoto.Picture != null ? ImageToByteArray(pPhoto.Picture) : null;
             mainFrame.NavigationService.Navigate(pEducation);
         }
 
         private void Page3_BackButtonClick()
         {
+
             mainFrame.NavigationService.Navigate(pPhoto);
         }
 
         private void Page3_NextButtonClick() 
         {
-            userResumes.Education = pEducation.Education;
+            pResult.textBlolckSurname.Text = pFIO.textBoxSurname.Text;
+            pResult.textBlockName.Text = pFIO.textBoxName.Text;
+            pResult.textBlockPobatkovi.Text = pFIO.textBoxPobatkovi.Text;
+            pResult.textBlockAdress.Text = pFIO.textBoxAdress.Text;
+            pResult.textBlockDate.Text = pFIO.datePicker.SelectedDate?.ToShortDateString();
+            pResult.textBlockPhone.Text = pFIO.textBoxPhone.Text;
+            pResult.textBlockEmail.Text = pFIO.textBoxEmail.Text;
+
+
+            pResult.pictureBox2.Source = pPhoto.pictureBox.Source;
+
+            TextRange textRange = new TextRange(pEducation.richTextBox.Document.ContentStart, pEducation.richTextBox.Document.ContentEnd);
+            pResult.textBlockEducation.Text = textRange.Text;
 
 
             mainFrame.NavigationService.Navigate(pResult);
+        }
+
+        private byte[] ConvertImageToByteArray(ImageSource imageSource)
+        {
+            if (imageSource == null)
+                return null;
+
+            BitmapImage bitmapImage = (BitmapImage)imageSource;
+            byte[] imageData;
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                BitmapEncoder encoder = new BmpBitmapEncoder();
+                encoder.Frames.Add(BitmapFrame.Create(bitmapImage));
+                encoder.Save(ms);
+                imageData = ms.ToArray();
+            }
+
+            return imageData;
         }
 
         private void Page4_BackButtonClick()
@@ -83,7 +105,7 @@ namespace WPF_Resume
         }
         private void CloseApplication()
         {
-            Application.Current.Shutdown();
+            System.Windows.Application.Current.Shutdown();
         }
 
         private void buttonBack_Click(object sender, RoutedEventArgs e)
@@ -123,7 +145,6 @@ namespace WPF_Resume
 
         private void buttonClose_Click(object sender, RoutedEventArgs e)
         {
-            //CloseApplication(); 
             using (AplicationContext db = new AplicationContext())
             {
                 UserResume exitUserResume = db.UserResume.FirstOrDefault();
@@ -154,8 +175,8 @@ namespace WPF_Resume
                         PhoneNumber = pFIO.PhoneNumber,
                         Email = pFIO.Email,
                         Picture = pPhoto.Picture != null ? ImageToByteArray(pPhoto.Picture) : null,
-                        Education = pEducation.Education                        
-                     };
+                        Education = pEducation.Education
+                    };
 
                     db.UserResume.Add(newResume);
                     db.SaveChanges();
@@ -224,9 +245,6 @@ namespace WPF_Resume
                 if (existingResume != null)
                 {
                     bool resumeIncomplete = false;
-                    //bool resumeFio = false;
-                    //bool resumeEducation = false;
-
 
                     pFIO.textBoxSurname.Text = existingResume.Surname;
                     pFIO.textBoxName.Text = existingResume.UserName;
@@ -235,8 +253,6 @@ namespace WPF_Resume
                     pFIO.textBoxAdress.Text = existingResume.Adress;
                     pFIO.textBoxPhone.Text = existingResume.PhoneNumber;
                     pFIO.textBoxEmail.Text = existingResume.Email;
-
-
 
                     if (existingResume.Picture != null)
                     {
@@ -286,7 +302,7 @@ namespace WPF_Resume
                             mainFrame.NavigationService.Navigate(pEducation);
                         }
                     }
-                    if(result == MessageBoxResult.No)
+                    if (result == MessageBoxResult.No)
                     {
                         ClearTextBox();
                         mainFrame.NavigationService.Navigate(pFIO);
@@ -294,7 +310,6 @@ namespace WPF_Resume
                 }
             }
         }
-   
 
         private void ClearTextBox()
         {
