@@ -5,13 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WPF_Resume"
       mc:Ignorable="d"
-      Title="PPhoto" Height="305" Width="614">
+      Title="PPhoto" Height="452" Width="800">
 
     <Grid>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="208" Margin="324,10,0,0" VerticalAlignment="Top" Width="279">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="432" Margin="324,0,0,0" VerticalAlignment="Center" Width="466">
             <Image x:Name="pictureBox" Stretch="Uniform" Cursor="Hand" />
         </Border>
-        <TextBlock HorizontalAlignment="Left" Margin="26,19,0,0" TextWrapping="Wrap" Text="Добавте своє фото" VerticalAlignment="Top" FontSize="16"/>
-        <Button x:Name="buttonAddPicture" Content="Додати фото" HorizontalAlignment="Left" Margin="56,82,0,0" VerticalAlignment="Top" FontSize="16" Height="103" Width="151" Click="buttonAddPicture_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="74,181,0,0" TextWrapping="Wrap" Text="Добавте своє фото" VerticalAlignment="Top" FontSize="20"/>
+        <Button x:Name="buttonAddPicture" Content="Додати фото" HorizontalAlignment="Left" Margin="85,226,0,0" VerticalAlignment="Top" FontSize="16" Height="39" Width="151" Click="buttonAddPicture_Click"/>
     </Grid>
 </Page>

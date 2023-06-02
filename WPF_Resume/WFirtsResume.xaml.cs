@@ -59,7 +59,8 @@ namespace WPF_Resume
 
         private void Page2_NextButtonClick()
         {
-         //   userResumes.Picture = pPhoto.Picture;
+            // userResumes.Picture = pPhoto.Picture;
+            userResumes.Picture = pPhoto.Picture != null ? ImageToByteArray(pPhoto.Picture) : null;
             mainFrame.NavigationService.Navigate(pEducation);
         }
 
@@ -71,6 +72,8 @@ namespace WPF_Resume
         private void Page3_NextButtonClick() 
         {
             userResumes.Education = pEducation.Education;
+
+
             mainFrame.NavigationService.Navigate(pResult);
         }
 

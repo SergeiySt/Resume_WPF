@@ -25,6 +25,6 @@
         <TextBlock x:Name="textBlockEmail" HorizontalAlignment="Left" Margin="356,191,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14"/>
         <TextBlock HorizontalAlignment="Left" Margin="315,226,0,0" TextWrapping="Wrap" Text="Освіта:" VerticalAlignment="Top" FontSize="18"/>
         <TextBlock x:Name="textBlockEducation" HorizontalAlignment="Left" Margin="315,255,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="153" Width="475"/>
-        <Button x:Name="buttonPrintToPdf" Content="Друкувати" HorizontalAlignment="Left" Margin="211,420,0,0" VerticalAlignment="Top" Width="348"/>
+        <Button x:Name="buttonPrintToPdf" Content="Друкувати" HorizontalAlignment="Left" Margin="211,420,0,0" VerticalAlignment="Top" Width="348" FontSize="14"/>
     </Grid>
 </Page>
