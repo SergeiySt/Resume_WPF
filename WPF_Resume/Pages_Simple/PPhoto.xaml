@@ -9,7 +9,7 @@
 
     <Grid>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="432" Margin="324,0,0,0" VerticalAlignment="Center" Width="466">
-            <Image x:Name="pictureBox" Stretch="Uniform" Cursor="Hand" />
+            <Image x:Name="pictureBox" Cursor="Hand" />
         </Border>
         <TextBlock HorizontalAlignment="Left" Margin="74,181,0,0" TextWrapping="Wrap" Text="Добавте своє фото" VerticalAlignment="Top" FontSize="20"/>
         <Button x:Name="buttonAddPicture" Content="Додати фото" HorizontalAlignment="Left" Margin="85,226,0,0" VerticalAlignment="Top" FontSize="16" Height="39" Width="151" Click="buttonAddPicture_Click"/>

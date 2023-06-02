@@ -22,6 +22,8 @@ namespace WPF_Resume
     {
         //public event Action NextPageClicked;
 
+        public event Action<string, string, string, DateTime, string, string, string> NextPageClicked;
+
         public string Surname { get { return textBoxSurname.Text; } }
         public string UserName { get { return textBoxName.Text; } }
         public string Pobatkovi { get { return textBoxPobatkovi.Text; } }
