@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Resume"
         mc:Ignorable="d"
-        Title="Спрощений варіант" Height="450" Width="800" Closing="Window_Closing" Loaded="Window_Loaded">
+        ResizeMode="NoResize"
+        Title="Спрощений варіант" Height="574" Width="839" Closing="Window_Closing" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
     <Grid>
-        <StackPanel Margin="10,10,10,83">
-            <Frame x:Name="mainFrame" Height="341" >
+        <StackPanel Margin="10,10,10,10">
+            <Frame x:Name="mainFrame" Height="452" >
 
             </Frame>
         </StackPanel>
-        <Button x:Name="buttonBack" Content="Назад" HorizontalAlignment="Left" Margin="83,378,0,0" Width="119" Click="buttonBack_Click" Height="20" VerticalAlignment="Top"/>
-        <Button x:Name="buttonNext" Content="Далі" HorizontalAlignment="Left" Margin="232,378,0,0" Width="101" Click="buttonNext_Click" Height="20" VerticalAlignment="Top"/>
-        <Button x:Name="buttonClose" Content="Завершити" HorizontalAlignment="Left" Margin="377,378,0,0" Width="96" Click="buttonClose_Click" Height="20" VerticalAlignment="Top"/>
+        <Button x:Name="buttonBack" Content="Назад" HorizontalAlignment="Left" Margin="151,477,0,0" Width="123" Click="buttonBack_Click" Height="39" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="buttonNext" Content="Далі" HorizontalAlignment="Center" Margin="0,477,0,0" Width="116" Click="buttonNext_Click" Height="39" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="buttonClose" Content="Завершити" HorizontalAlignment="Left" Margin="565,477,0,0" Width="101" Click="buttonClose_Click" Height="39" VerticalAlignment="Top" FontSize="16"/>
     </Grid>
 </Window>

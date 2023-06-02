@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WPF_Resume.Pages_Simple"
       mc:Ignorable="d"
-      Title="PEducation" Height="219" Width="549">
+      Title="PEducation" Height="452" Width="800">
     <Page.Resources>
         <Style x:Key="NoSpacingParagraph" TargetType="Paragraph">
             <Setter Property="Margin" Value="0"/>
@@ -14,9 +14,9 @@
     </Page.Resources>
     <Grid>
         
-        <TextBlock HorizontalAlignment="Left" Margin="10,22,0,0" TextWrapping="Wrap" Text="Освіта:" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Освіта:" VerticalAlignment="Top" FontSize="16"/>
        
-        <RichTextBox x:Name="richTextBox" Margin="10,48,10,10">
+        <RichTextBox x:Name="richTextBox" Margin="10,36,10,10">
             <FlowDocument>
                 <Paragraph Style="{StaticResource NoSpacingParagraph}">
                     <!--<Run Text="RichTextBox"/>-->
