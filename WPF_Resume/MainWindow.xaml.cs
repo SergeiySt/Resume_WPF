@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -30,6 +31,18 @@ namespace WPF_Resume
             WChoice wChoice = new WChoice();
             wChoice.Show();
             this.Close();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Storyboard labelAnimation = FindResource("LabelAnimation") as Storyboard;
+            Storyboard imageAnimation = FindResource("ImageAnimation") as Storyboard;
+            Storyboard buttonAnimation = FindResource("ButtonAnimation") as Storyboard;
+
+            labelAnimation.Begin(label1);
+            labelAnimation.Begin(label2);
+            imageAnimation.Begin(pictureBox);
+            buttonAnimation.Begin(buttonBegin);
         }
     }
 }

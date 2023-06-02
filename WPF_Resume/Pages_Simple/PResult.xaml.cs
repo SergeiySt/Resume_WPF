@@ -24,10 +24,13 @@ using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
+using Xceed.Document.NET;
+using Xceed.Words.NET;
 //using PdfSharp.Drawing;
 using Image = iText.Layout.Element.Image;
 using Paragraph = iText.Layout.Element.Paragraph;
 using Table = iText.Layout.Element.Table;
+
 
 namespace WPF_Resume.Pages_Simple
 {
@@ -83,7 +86,7 @@ namespace WPF_Resume.Pages_Simple
             string filePath = "resume.pdf";
             PdfWriter writer = new PdfWriter(filePath);
             PdfDocument pdf = new PdfDocument(writer);
-            Document document = new Document(pdf);
+            iText.Layout.Document document = new iText.Layout.Document(pdf);
 
 
             float[] columnWidths = { 150, 350 };
@@ -106,33 +109,31 @@ namespace WPF_Resume.Pages_Simple
                 iText.Layout.Element.Image image = new iText.Layout.Element.Image(ImageDataFactory.Create(imageBytes))
                     .SetWidth(150)
                     .SetHeight(150);
-                table.AddCell(new Cell().Add(image).SetBorder(iText.Layout.Borders.Border.NO_BORDER));
+                table.AddCell(new iText.Layout.Element.Cell().Add(image).SetBorder(iText.Layout.Borders.Border.NO_BORDER));
             }
 
 
             Paragraph personalInfoParagraph = new Paragraph()
-                .Add(new Text($"Фамилия: {surname}\n").SetFontSize(28).SetBold())
-                .Add(new Text($"Имя: {name}\n").SetFontSize(28).SetBold())
-                .Add(new Text($"Отчество: {patronymic}\n").SetFontSize(28).SetBold())
-                .Add(new Text($"Дата рождения: {dateOfBirth}\n"))
-                .Add(new Text($"Адрес: {address}\n"))
-                .Add(new Text($"Телефон: {phoneNumber}\n"))
+                .Add(new Text($"{surname}\n").SetFontSize(28).SetBold())
+                .Add(new Text($"{name}\n").SetFontSize(28).SetBold())
+                .Add(new Text($"{patronymic}\n").SetFontSize(28).SetBold())
+                .Add(new Text($"Date of Birth: {dateOfBirth}\n"))
+                .Add(new Text($"Address: {address}\n"))
+                .Add(new Text($"Phone: {phoneNumber}\n"))
                 .Add(new Text($"Email: {email}\n"));
-            table.AddCell(new Cell().Add(personalInfoParagraph).SetBorder(iText.Layout.Borders.Border.NO_BORDER));
+            table.AddCell(new iText.Layout.Element.Cell().Add(personalInfoParagraph).SetBorder(iText.Layout.Borders.Border.NO_BORDER));
 
 
             Paragraph educationHeader = new Paragraph("Education")
                 .SetFontSize(18)
                 .SetBold();
             Paragraph educationText = new Paragraph(education);
-            table.AddCell(new Cell(1, 2).Add(educationHeader).Add(educationText).SetBorder(iText.Layout.Borders.Border.NO_BORDER));
+            table.AddCell(new iText.Layout.Element.Cell(1, 2).Add(educationHeader).Add(educationText).SetBorder(iText.Layout.Borders.Border.NO_BORDER));
 
 
             document.Add(table);
             document.Close();
             System.Diagnostics.Process.Start(filePath);
-
-         
         }
         private byte[] GetImageBytesFromImageControl(System.Windows.Controls.Image imageControl)
         {
