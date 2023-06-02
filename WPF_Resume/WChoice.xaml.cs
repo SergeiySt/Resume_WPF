@@ -32,6 +32,12 @@ namespace WPF_Resume
                 wFirtsResume.Show();
                 this.Close();
             }
+            if(radioButtonComplex.IsChecked == true)
+            {
+                WSecondForm secondForm = new WSecondForm();
+                secondForm.Show();
+                this.Close();
+            }
         }
     }
 }
