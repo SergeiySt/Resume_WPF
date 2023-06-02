@@ -220,11 +220,20 @@
       <DependentUpon>20230601222209_UserResume.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AplicationContextModelSnapshot.cs" />
+    <Compile Include="Pages_Forma2\PEdEx.xaml.cs">
+      <DependentUpon>PEdEx.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages_Forma2\PFIO2.xaml.cs">
       <DependentUpon>PFIO2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages_Forma2\PPhoto2.xaml.cs">
       <DependentUpon>PPhoto2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages_Forma2\PResult2.xaml.cs">
+      <DependentUpon>PResult2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages_Forma2\PSkPq.xaml.cs">
+      <DependentUpon>PSkPq.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages_Simple\PEducation.xaml.cs">
       <DependentUpon>PEducation.xaml</DependentUpon>
@@ -261,11 +270,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages_Forma2\PEdEx.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages_Forma2\PFIO2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages_Forma2\PPhoto2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages_Forma2\PResult2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages_Forma2\PSkPq.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

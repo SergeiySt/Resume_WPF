@@ -119,3 +119,15 @@ D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\bin\Debug\BouncyCas
 D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\bin\Debug\BouncyCastle.Crypto.xml
 D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\bin\Debug\Xceed.Document.NET.dll
 D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\bin\Debug\Xceed.Words.NET.dll
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\Pages_Forma2\PFIO2.g.cs
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\Pages_Forma2\PPhoto2.g.cs
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\WSecondForm.g.cs
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\Pages_Forma2\PFIO2.baml
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\Pages_Forma2\PPhoto2.baml
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\WSecondForm.baml
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\Pages_Forma2\PEdEx.g.cs
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\Pages_Forma2\PSkPq.g.cs
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\Pages_Forma2\PEdEx.baml
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\Pages_Forma2\PSkPq.baml
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\Pages_Forma2\PResult2.g.cs
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\Pages_Forma2\PResult2.baml
