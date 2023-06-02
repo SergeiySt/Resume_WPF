@@ -40,7 +40,7 @@ namespace WPF_Resume
 
         private void Page1_NextButtonClick()
         {
-            mainFrame.NavigationService.Navigate(pPhoto);
+                mainFrame.NavigationService.Navigate(pPhoto);
         }
 
         private void Page2_BackButtonClick()
@@ -51,7 +51,8 @@ namespace WPF_Resume
 
         private void Page2_NextButtonClick()
         {
-            mainFrame.NavigationService.Navigate(pEducation);
+           
+                mainFrame.NavigationService.Navigate(pEducation);
         }
 
         private void Page3_BackButtonClick()
@@ -62,24 +63,67 @@ namespace WPF_Resume
 
         private void Page3_NextButtonClick() 
         {
-            pResult.textBlolckSurname.Text = pFIO.textBoxSurname.Text;
-            pResult.textBlockName.Text = pFIO.textBoxName.Text;
-            pResult.textBlockPobatkovi.Text = pFIO.textBoxPobatkovi.Text;
-            pResult.textBlockAdress.Text = pFIO.textBoxAdress.Text;
-            pResult.textBlockDate.Text = pFIO.datePicker.SelectedDate?.ToShortDateString();
-            pResult.textBlockPhone.Text = pFIO.textBoxPhone.Text;
-            pResult.textBlockEmail.Text = pFIO.textBoxEmail.Text;
+
+            if (IsFieldsFilled())
+            {
+                pResult.textBlolckSurname.Text = pFIO.textBoxSurname.Text;
+                pResult.textBlockName.Text = pFIO.textBoxName.Text;
+                pResult.textBlockPobatkovi.Text = pFIO.textBoxPobatkovi.Text;
+                pResult.textBlockAdress.Text = pFIO.textBoxAdress.Text;
+                pResult.textBlockDate.Text = pFIO.datePicker.SelectedDate?.ToShortDateString();
+                pResult.textBlockPhone.Text = pFIO.textBoxPhone.Text;
+                pResult.textBlockEmail.Text = pFIO.textBoxEmail.Text;
 
 
-            pResult.pictureBox2.Source = pPhoto.pictureBox.Source;
+                pResult.pictureBox2.Source = pPhoto.pictureBox.Source;
 
-            TextRange textRange = new TextRange(pEducation.richTextBox.Document.ContentStart, pEducation.richTextBox.Document.ContentEnd);
-            pResult.textBlockEducation.Text = textRange.Text;
+                TextRange textRange = new TextRange(pEducation.richTextBox.Document.ContentStart, pEducation.richTextBox.Document.ContentEnd);
+                pResult.textBlockEducation.Text = textRange.Text;
 
-
-            mainFrame.NavigationService.Navigate(pResult);
+                mainFrame.NavigationService.Navigate(pResult);
+            }
+            else
+            {
+                MessageBox.Show("Заповніть всі поля", "Увага", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
         }
 
+        private bool IsFieldsFilled()
+        {
+
+            if (string.IsNullOrEmpty(pFIO.textBoxSurname.Text))
+                return false;
+
+            if (string.IsNullOrEmpty(pFIO.textBoxName.Text))
+                return false;
+
+            if (string.IsNullOrEmpty(pFIO.textBoxPobatkovi.Text))
+                return false;
+
+            if (string.IsNullOrEmpty(pFIO.textBoxAdress.Text))
+                return false;
+
+            if (pFIO.datePicker.SelectedDate == null)
+                return false;
+
+            if (string.IsNullOrEmpty(pFIO.textBoxPhone.Text))
+                return false;
+
+            if (string.IsNullOrEmpty(pFIO.textBoxEmail.Text))
+                return false;
+
+
+            if (pPhoto.pictureBox.Source == null)
+                return false;
+
+            TextRange textRange = new TextRange(pEducation.richTextBox.Document.ContentStart, pEducation.richTextBox.Document.ContentEnd);
+            if (string.IsNullOrEmpty(textRange.Text.Trim()))
+                return false;
+
+
+            return true;
+        }
         private byte[] ConvertImageToByteArray(ImageSource imageSource)
         {
             if (imageSource == null)
@@ -284,18 +328,19 @@ namespace WPF_Resume
                     MessageBoxResult result;
                     if (resumeIncomplete)
                     {
-                        result = MessageBox.Show("Резюме неполное. Желаете продолжить заполнение?", "Восстановление резюме", MessageBoxButton.YesNo);
+                        result = MessageBox.Show("Резюме неповне. Бажаєте продовжити наповнення?", "Відновлення резюме", MessageBoxButton.YesNo, MessageBoxImage.Information);
                     }
                     else
                     {
-                        result = MessageBox.Show("Желаете продолжить предыдущую работу?", "Восстановление резюме", MessageBoxButton.YesNo);
+                        // result = MessageBox.Show("Бажаєте продовжити попередню роботу?", "Відновлення резюме", MessageBoxButton.YesNo);
+                        result = MessageBox.Show("Бажаєте продовжити попередню роботу?", "Відновлення резюме", MessageBoxButton.YesNo, MessageBoxImage.Information);
                     }
 
                     if (result == MessageBoxResult.Yes)
                     {
                         if (resumeIncomplete)
                         {
-                            mainFrame.NavigationService.Navigate(pPhoto);
+                            mainFrame.NavigationService.Navigate(pFIO);
                         }
                         else
                         {
@@ -324,7 +369,6 @@ namespace WPF_Resume
             pPhoto.pictureBox.Source = null;
 
             pEducation.richTextBox.Document.Blocks.Clear();
-
         }
     }
 }

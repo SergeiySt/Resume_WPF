@@ -117,3 +117,5 @@ D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\WPF_Resum
 D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\obj\Debug\WPF_Resume.pdb
 D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\bin\Debug\BouncyCastle.Crypto.dll
 D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\bin\Debug\BouncyCastle.Crypto.xml
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\bin\Debug\Xceed.Document.NET.dll
+D:\ДЗ_Шаг\Windows Forms C#\GitHub\Resume_WPF\WPF_Resume\bin\Debug\Xceed.Words.NET.dll

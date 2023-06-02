@@ -6,10 +6,30 @@
         xmlns:local="clr-namespace:WPF_Resume"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="MainWindow" Height="274" Width="413" WindowStartupLocation="CenterScreen">
+        Title="RESUME" Height="433" Width="413" WindowStartupLocation="CenterScreen" Icon="/Picture/cv_102350.ico" Loaded="Window_Loaded">
+
+    <Window.Resources>
+
+        <Storyboard x:Key="LabelAnimation">
+            <DoubleAnimation From="0" To="1" Duration="0:0:4" Storyboard.TargetName="label1" Storyboard.TargetProperty="Opacity" />
+            <DoubleAnimation From="0" To="1" Duration="0:0:4" Storyboard.TargetName="label2" Storyboard.TargetProperty="Opacity" BeginTime="0:0:4"/>
+        </Storyboard>
+        <Storyboard x:Key="ImageAnimation">
+            <DoubleAnimation From="0" To="1" Duration="0:0:4" Storyboard.TargetName="pictureBox" Storyboard.TargetProperty="Opacity" BeginTime="0:0:4"/>
+        </Storyboard>
+        <Storyboard x:Key="ButtonAnimation">
+            <DoubleAnimation From="150" To="1" Duration="0:0:7" Storyboard.TargetName="buttonBegin"  Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)" BeginTime="0:0:5"/>
+        </Storyboard>
+    </Window.Resources>
+    
     <Grid>
-        <Label Content="Вітаємо Вас у програмі" HorizontalAlignment="Left" Margin="71,10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
-        <Button x:Name="buttonBegin" Content="Почати" HorizontalAlignment="Left" Margin="157,153,0,0" FontSize="18" Width="108" Height="48" VerticalAlignment="Top" Click="buttonBegin_Click"/>
-        <Label Content="RESUME" HorizontalAlignment="Left" Margin="135,57,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+        <Label x:Name="label1" Content="Вітаємо Вас у програмі" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="#FF4660EF" Opacity="0"/>
+        <Button x:Name="buttonBegin" Content="Почати" HorizontalAlignment="Center" Margin="0,322,0,0" FontSize="18" Width="108" Height="48" VerticalAlignment="Top" Click="buttonBegin_Click">
+            <Button.RenderTransform>
+                <TranslateTransform Y="120"/>
+            </Button.RenderTransform>
+        </Button>
+        <Label x:Name="label2" Content="&quot;RESUME&quot;" HorizontalAlignment="Center" Margin="0,57,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Foreground="#FF4660EF" Opacity="0"/>
+        <Image x:Name="pictureBox" HorizontalAlignment="Center" Height="170" Margin="0,120,0,0" VerticalAlignment="Top" Width="224" Stretch="Fill" Source="/Picture/ptttpng.png" Opacity="0"/>
     </Grid>
 </Window>
