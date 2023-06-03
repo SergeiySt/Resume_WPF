@@ -16,12 +16,13 @@
         <TextBlock HorizontalAlignment="Left" Margin="56,148,0,0" TextWrapping="Wrap" Text="По-батькові:" VerticalAlignment="Top"  FontSize="16"/>
         <TextBox x:Name="textBoxPobatkovi" HorizontalAlignment="Left" Margin="169,147,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="621" FontSize="16"/>
         <TextBlock HorizontalAlignment="Left" Margin="15,238,0,0" TextWrapping="Wrap" Text="Дата народження:" VerticalAlignment="Top" FontSize="16"/>
-        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="169,237,0,0" VerticalAlignment="Top" Width="621" Language="uk-UA"/>
+       
         <Label Content="Телефон:" HorizontalAlignment="Left" Margin="76,279,0,0" VerticalAlignment="Top" FontSize="16"/>
         <TextBox x:Name="textBoxPhone" HorizontalAlignment="Left" Margin="169,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="621" FontSize="16"/>
         <Label Content="Email:" HorizontalAlignment="Left" Margin="101,321,0,0" VerticalAlignment="Top" FontSize="16"/>
         <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Margin="169,325,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="621" FontSize="16"/>
         <Label Content="Адреса:" HorizontalAlignment="Left" Margin="87,189,0,0" VerticalAlignment="Top" FontSize="16"/>
         <TextBox x:Name="textBoxAdress" HorizontalAlignment="Left" Margin="169,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="621" FontSize="16"/>
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="169,235,0,0" VerticalAlignment="Top" Width="621" Language="uk-UA"/>
     </Grid>
 </Page>
