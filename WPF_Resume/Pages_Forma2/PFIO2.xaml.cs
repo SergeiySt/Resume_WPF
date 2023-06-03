@@ -20,8 +20,7 @@ namespace WPF_Resume.Pages_Forma2
     /// </summary>
     public partial class PFIO2 : Page
     {
-        public event Action<string, string, string, DateTime, string, string, string> NextPageClicked;
-
+     
         public string Surname { get { return textBoxSurname.Text; } }
         public string UserName { get { return textBoxName.Text; } }
         public string Pobatkovi { get { return textBoxPobatkovi.Text; } }
