@@ -1,0 +1,16 @@
+﻿<Page x:Class="WPF_Resume.Pages_Forma2.PResult2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_Resume.Pages_Forma2"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PResult2">
+
+    <Grid>
+        <Button x:Name="buttonPrintDocx" Content="Надрукувати у формат docx" HorizontalAlignment="Center" Margin="0,139,0,0" VerticalAlignment="Top" FontSize="16" Height="42" Width="242" Click="buttonPrintDocx_Click"/>
+        <Button x:Name="buttonPrintPdf" Content="Надрукувати у формат pdf" HorizontalAlignment="Center" VerticalAlignment="Top" Width="242" Margin="0,225,0,0" Height="42" FontSize="16"/>
+
+    </Grid>
+</Page>
